@@ -1,0 +1,467 @@
+/**********************
+* SUMÁRIO DO SITE *
+* 1. Imports (Bootstrap, Fontes, etc)
+** 2. CSS Base (Reset)
+*** 3. Variáveis
+**** 4. Tipografia
+***** 5. Links
+****** 6. Botões
+******* 7. Títulos
+******** 8. Página "Principal"
+********* 9. Página "Quem-Somos"
+********** 10. Página "Fale-Conosco"
+*********** 11. Compartilhado
+*********** 11.1 NavBar
+*********** 11.2 Formulário
+*********** 11.3 Footer
+**********************/
+
+
+/* 1. Imports */
+@import url('/dist/css/bootstrap.min.css');
+@import url('/dist/css/all.min.css');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800&display=swap');
+@import url('href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+
+
+/* 2. CSS Base */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body html {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Variáveis */
+:root {
+  /* /cores/ */
+  --color-main: #24A69F;
+  --color-secondary: #3E4245;
+  --color-accent: #EE7397;
+  --color-accent-d: #9C669B;
+  --color-text: #707070;
+  --color-gray: #858d93;
+  --color-white: #FFFFFF;
+  --color-yellow: #FCBD10;
+  --color-green: #27AE60;
+  --color-orange: #FFA500;
+  --color-dark-orange: #cc8400;
+  --color-gray-footer: #C9C9C9;
+  --color-gray-quem-somos: #606060;
+  --color-black: #000000;
+
+  /* /tipografia principal/ */
+  --font-family: 'Open Sans', sans-serif;
+  --base-font-size: 16px;
+
+  /* /espaços/ */
+  --s-xs: .5rem;
+  --s-s: 1rem;
+  --s-m: 2rem;
+  --s-l: 3rem;
+  --s-xl: 4rem;
+}
+
+/* 4. Tipografia */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: 400;
+  font-family: var(--font-family);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* 5. Links */
+a {
+  padding: 1rem;
+  text-transform: uppercase;
+  color: var(--color-white);
+  border-bottom: 2px solid transparent;
+  font-weight: bold;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+a:hover{
+    color: var(--color-gray); 
+}
+
+/* 6. Botões */
+
+.btn-contato {
+  background-color: var(--color-orange);
+  border-radius: 25px;
+  padding: 10px 25px 10px 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: var(--color-white);
+  text-transform: none;
+  padding: 13px 40px;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+}
+
+.btn-credito {
+    background-color: var(--color-orange);
+    border-radius: 25px;
+    padding: 10px 25px 10px 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: var(--color-white);
+    text-transform: none;
+    padding: 13px 40px;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    font-size: 24px;
+  }
+
+.btn-credito:hover{
+    background-color: var(--color-dark-orange);
+    color: var(--color-white);
+}
+
+/* 7. Títulos */
+
+h3{
+    color: var(--color-white);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 3.5vw;
+}
+
+/* 8. Principal */
+
+.div-principal{
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.div-0{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.div-1{
+    padding: 25px;
+}
+.div-secondaria{
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.texto-1{
+    color: var(--color-white);
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.texto-2{
+    color: var(--color-yellow);
+    padding-bottom: 30px;
+}
+
+.texto-3{
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 1.3px;
+}
+
+.texto-4{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    color: var(--color-white);
+}
+
+.texto-5{
+    font-weight: 800;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.texto-6{
+    font-style: italic;
+    font-size: 24px;
+    color: var(--color-white);
+    padding-bottom: 30px;
+}
+.texto-7{
+    padding-top: 30px;
+    padding-bottom: 50px
+}
+.lista-principal li{
+    padding-bottom: 20px;
+}
+.lista-principal span{
+    color: var(--color-white);
+    padding-left: 15px;
+    font-weight: 300;
+}
+/* 9. Quem-Somos */
+.area-cliente{
+    background-color: var(--color-gray-quem-somos);
+}
+.texto-quem-somos{
+    font-size: 30px;
+}
+
+.texto-quem-somos p{
+    color: var(--color-white);
+    line-height: 1.5;
+    margin-top: 30px;
+}
+
+.item-check{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+.lista-check{
+    font-size: 24px;
+}
+
+.titulo-1{
+    font-weight: normal;
+    font-size: 3.2vw;
+}
+.titulo-2{
+    font-size: 48px;
+    font-size: 3.5vw;
+}
+.row-carousel{
+    color: var(--color-white);
+    padding-bottom: 50px;
+}
+.row-carousel p{
+    font-size: 25px;
+}
+.row-carousel-cliente{
+    padding-top: 30px;
+}
+
+.carousel-cliente{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+ol.carousel-indicators {
+    position: absolute;
+    bottom: 5px;
+    margin: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+ }
+ 
+ ol.carousel-indicators li,
+ ol.carousel-indicators li.active {
+    width: .8rem;
+    height: .8rem;
+    margin: 0;
+    border-radius: 50%;
+    border: 0;
+    background: transparent;
+ }
+
+ ol.carousel-indicators li.active{
+    border-radius: 25%;
+    width: 1.5rem
+ }
+ 
+ ol.carousel-indicators li {
+    background: rgba(255,255,255,0.39);
+    margin-left: .5rem;
+    margin-top: .5rem;
+    margin-right: .5rem;
+ }
+ 
+ ol.carousel-indicators li.active {
+    background: var(--color-orange);
+    margin-left: .5rem;
+    margin-top: .5rem;
+    margin-right: .5rem;
+ }
+
+/* Dados do Carousel*/
+.cliente-nome{
+    color: var(--color-black);
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0px;
+}
+.cliente-cargo{
+    color: var(--color-yellow);
+    font-weight: bold;
+    display: block;
+    font-size: 20px;
+    padding: 0px;
+}
+/*  ----   */ 
+.logo-container{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.background-set{
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--color-orange);
+}
+.background-set i{
+    padding-top: 30px;
+    color: var(--color-white);
+}
+.background-set h3{
+    margin-top: 20px;
+    font-size: 2.5vw;
+    color: var(--color-yellow);
+}
+
+.background-set img{
+    margin-left: 50%;
+}
+.cliente-satisfeito{
+    color: var(--color-yellow);
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+.adjust-space{
+    padding-top: 50px;
+}
+
+/* 10. Contato */
+
+.fale-conosco h4{
+    font-size: 2.3vw;
+    color: var(--color-yellow);
+    font-family: 'Work Sans', sans-serif;
+    margin-bottom: 40px;
+}
+.fale-conosco h6{
+    font-size: 18px;
+    color: var(--color-yellow);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.fale-conosco p{
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-white);
+}
+.bar-footer{
+    background-color: var(--color-yellow);
+    padding: 15px;
+}
+.back{
+    color: var(--color-white);
+    margin-left: 40px;
+    margin-top: 40px;
+    padding-left: 20px;
+}
+
+.titulo-contato {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+.info-contato{
+    color: var(--color-white) !important;  
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 11. Compartilhado */
+
+/* ****************** */
+
+/* 11.1 NavBar */
+.navbar-custom {
+    background-color: var(--color-gray);
+}
+
+.container {
+  margin-left: 0px;
+}
+
+@media(max-width:33.9em) {
+  .navbar .collapse {max-height:250px;width:100%;overflow-y:auto;overflow-x:hidden;}
+  .navbar .navbar-brand {float:none;display: inline-block;}
+  .navbar .navbar-nav>.nav-item { float: none; margin-left: .1rem;}
+  .navbar .navbar-nav {float:none !important;}
+  .nav-item{width:100%;text-align:left;}
+  .navbar .collapse .dropdown-menu {
+      position: relative;
+      float: none;
+      background:none;
+      border:none;
+  }
+}
+
+/* 11.2 Formulário */
+.form-control{
+    border-radius: 15px;
+    border-color: var(--color-yellow);
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+.form-control::placeholder{
+    color: var(--color-white);
+}
+.form-control:focus {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+.form-check-label{
+    color: var(--color-white);
+    padding-left: 5px;
+}
+.form-check-input{
+    padding-left: 5px;
+}
+
+
+
+/* 11.3 Footer */
+
+.footer-prime{
+    background-color: var(--color-gray-footer);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer-prime i{
+    color: var(--color-green);
+}
+.rede-social img{
+    padding-bottom: 20px;
+}
+.footer-lista{
+    font-size: 1vw;
+}
+
+/** Media Queries **/
+
+@media screen and (max-width: 800px) {
+	.logo-footer {
+		display: none;
+    }
+    .rede-social {
+        display: none;
+    }
+}
+
